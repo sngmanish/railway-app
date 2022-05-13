@@ -11,13 +11,15 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <React.StrictMode>
       <BrowserRouter>
       <Switch> 
              <Route path="/login" component={Login} />
              <Route exact path="/" component={Dashboard} />
         </Switch>
       </BrowserRouter>
-      <Login/>
+      </React.StrictMode>
+      {/* <Login/> */}
       
     </div>
   );

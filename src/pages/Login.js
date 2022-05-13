@@ -40,6 +40,7 @@ const Login = () => {
         const successMessage = "Logged in successfully";
         enqueueSnackbar(successMessage, { variant: 'success' });
         const { access_token, token_type, expires_in } = postRequestResponse.data;
+        console.log(postRequestResponse)
         persistLogin(access_token, expires_in);
         history.push('/');
       } catch (error) {
