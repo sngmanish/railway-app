@@ -9,6 +9,8 @@ import React, { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
 import "./Login.css";
 import config from "../config/index"
+import Header from "../components/Header"
+
 
 
 const Login = () => {
@@ -97,10 +99,13 @@ const Login = () => {
 
   const persistLogin = (access_token, expires_in) => {
     localStorage.setItem('token', access_token.toString());
+    
     localStorage.setItem('time', expires_in);
   };
 
   return (
+    <>
+    <Header/>
     <Box
       display="flex"
       flexDirection="column"
@@ -152,6 +157,7 @@ const Login = () => {
       </Box>
       
     </Box>
+    </>
   );
 };
 
